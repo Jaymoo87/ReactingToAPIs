@@ -90,9 +90,6 @@ const App = () => {
                 <p className=" m-5 card-text "></p>
               </div>
               <div className="d-flex justify-content-around mt-5">
-                {/* <button className="btn btn-info" onClick={() => getFilm()}>
-                Film
-              </button> */}
                 <button
                   className="btn btn-info"
                   onClick={() => setCardLoaded("person")}
@@ -123,7 +120,7 @@ const App = () => {
                   <h6 className=" text-muted d-flex card-text fst-italic">
                     Year Released: {film.release_date}
                   </h6>
-                  <h6 className=" text-muted d-flex card-text fst-italic">
+                  <h6 className=" rotten text-muted d-flex card-text fst-italic">
                     Rotten Tomatoes: {film.rt_score}
                   </h6>
                 </div>
@@ -163,9 +160,6 @@ const App = () => {
                 >
                   Film
                 </button>
-                {/* <button className="btn btn-info" onClick={() => getPerson()}>
-                  People
-                </button> */}
               </div>
             </div>
           </div>
@@ -191,6 +185,7 @@ const App = () => {
                     Gender: {person.gender}
                   </h6>
                   <a
+                    target="_blank"
                     href={person.url}
                     className="text-decoration-none text-primary d-flex card-text fst-italic"
                   >
@@ -205,8 +200,6 @@ const App = () => {
     );
   }
 };
-
 export default App;
-//**** need to make person.url and name with a hyperlink to press */
-//****  className={text === 'foo' ? styles.class1 : styles.class2 }  syntax for rotten tomatoes score color */
-//{film.rt_score > 75 ? style.class1 : styles.class2}
+
+//****  className={text === 'foo' ? styles.class1 : styles.class2 }  syntax for rotten tomatoes score color maybe */

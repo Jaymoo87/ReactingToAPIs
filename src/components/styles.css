@@ -6,3 +6,10 @@ h6,
 span {
   user-select: none;
 }
+setColorRed {
+  color: red;
+}
+
+setColorGreen {
+  color: green;
+}
