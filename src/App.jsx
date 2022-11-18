@@ -2,6 +2,7 @@
 import { React, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./components/styles.css"
+import { normalizeUnits } from 'moment/moment';
 
 
 const App = () => {
@@ -23,7 +24,8 @@ const App = () => {
   return (
         <main>
             <button onClick={() => getFilm()}>Film</button>
-            {films.map(film => <div className="row col-12 justify-content-around">
+            <div className="row col-12 justify-content-around">
+            {films.map(film => 
                 <div  className="d-block col-12 col-md-6 col-sm-12 mt-4">
                     <div  className="mb-2 card shadow-lg">
                         <img className="border-color black rounded" style={{ aspectRatio: 2/1 }} src={film.movie_banner} />
@@ -37,10 +39,11 @@ const App = () => {
                             </div>
                     </div>
               </div>
-              </div>
- )}
+              
+ )}</div>
  <button onClick={() => getPerson()}>People</button>
-            {people.map(person => <div className="row col-12 justify-content-around">
+ <div className="row col-12 justify-content-around">
+            {people.map(person => 
                 <div  className="d-block col-12 col-md-6 col-sm-12 mt-4">
                     <div  className="mb-2 card shadow-lg">
                     <span className=" d-flex justify-content-end text-muted card-text fst-italic mx-2 mt-1">Age {person.age}</span>
@@ -54,8 +57,8 @@ const App = () => {
                             </div>
                     </div>
               </div>
-              </div> 
-            )}</main>
+             
+            )} </div> </main>
             );
         };
         
